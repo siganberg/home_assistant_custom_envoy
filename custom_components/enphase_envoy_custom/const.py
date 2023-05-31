@@ -10,7 +10,7 @@ from homeassistant.components.sensor import (
     SensorEntityDescription,
     SensorStateClass,
 )
-from homeassistant.const import ENERGY_WATT_HOUR, POWER_WATT, Platform, PERCENTAGE
+from homeassistant.const import ENERGY_WATT_HOUR, POWER_WATT, Platform, PERCENTAGE, UnitOfPower
 
 DOMAIN = "enphase_envoy"
 
@@ -28,7 +28,7 @@ SENSORS = (
     SensorEntityDescription(
         key="production",
         name="Current Power Production",
-        native_unit_of_measurement=POWER_WATT,
+        native_unit_of_measurement=UnitOfPower.WATT,
         state_class=SensorStateClass.MEASUREMENT,
         device_class=SensorDeviceClass.POWER,
     ),
@@ -56,7 +56,7 @@ SENSORS = (
     SensorEntityDescription(
         key="consumption",
         name="Current Power Consumption",
-        native_unit_of_measurement=POWER_WATT,
+        native_unit_of_measurement=UnitOfPower.WATT,
         state_class=SensorStateClass.MEASUREMENT,
         device_class=SensorDeviceClass.POWER,
     ),
