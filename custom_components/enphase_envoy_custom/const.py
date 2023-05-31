@@ -57,8 +57,8 @@ SENSORS = (
         key="consumption",
         name="Current Power Consumption",
         native_unit_of_measurement=UnitOfPower.WATT,
-        state_class=SensorStateClass.TOTAL_INCREASING,
-        device_class=SensorDeviceClass.ENERGY,
+        state_class=SensorStateClass.MEASUREMENT,
+        device_class=SensorDeviceClass.POWER,
     ),
     SensorEntityDescription(
         key="daily_consumption",
